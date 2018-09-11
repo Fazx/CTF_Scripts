@@ -1,11 +1,15 @@
 index.php
 index.txt
+index.bak
+.index.bak
 robots.txt
 test.php
 .index.php.swp
 .index.php.swo
 index.php.swp
 index.php.swo
+index.swp.bak
+.index.swp.bak
 www.rar
 www.zip
 www.7z

